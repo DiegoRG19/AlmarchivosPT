@@ -1,0 +1,25 @@
+﻿@model AlmarchivosPT.Models.Login
+
+<h2>Iniciar Sesión</h2>
+
+<form asp-action="Login" method="post">
+    <div>
+        <label>Usuario</label>
+    </div>
+    <div>
+        <input asp-for="Usuario" required />
+        <span asp-validation-for="Usuario" class="text-danger"></span>
+    </div>
+    <div>
+        <label>Contraseña</label>
+    </div>
+    <div>
+        <input asp-for="Pass" type="password" required />
+        <span asp-validation-for="Pass" class="text-danger"></span>
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+</form>
+<br />
+<a asp-action="Index" asp-controller="Home">Volver a la página principal</a>
+

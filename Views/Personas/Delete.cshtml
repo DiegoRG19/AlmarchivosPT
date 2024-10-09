@@ -1,0 +1,20 @@
+﻿@model AlmarchivosPT.Models.Persona
+
+<h3>Eliminar Persona</h3>
+
+<div>
+    <h4>¿Estás seguro de que quieres eliminar esta persona?</h4>
+    <dl>
+        <dt>Nombres</dt>
+        <dd>@Model.Nombres</dd>
+        <dt>Apellidos</dt>
+        <dd>@Model.Apellidos</dd>
+    </dl>
+
+    <form asp-action="Delete" method="post">
+        <input type="hidden" asp-for="IdPersona" />
+        <button type="submit" class="btn btn-primary">Eliminar</button>
+        <br />
+        <a asp-action="Index">Cancelar</a>
+    </form>
+</div>

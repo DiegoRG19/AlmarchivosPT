@@ -1,0 +1,36 @@
+﻿@model IEnumerable<AlmarchivosPT.Models.Persona>
+<link rel="stylesheet" type="text/css" href="~/css/styles.css" />
+
+<h2>Personas</h2>
+
+<table>
+    <tr>
+        <th>Nombres</th>
+        <th>Apellidos</th>
+        <th>Número de identificación</th>
+        <th>Email</th>
+        <th>Tipo identificación</th>
+        <th>Acciones</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Nombres</td>
+            <td>@item.Apellidos</td>
+            <td>@item.NumIdPersona</td>
+            <td>@item.Correo</td>
+            <td>@item.TipoIdPersona</td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdPersona" class="btn btn-primary">
+                    <i class="fas fa-edit"></i>Editar</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdPersona" class="btn btn-primary">
+                    <i class="fas fa-edit"></i>Eliminar
+                </a>
+            </td>
+        </tr>
+    }
+</table>
+
+<a asp-action="Create">Crear Nueva Persona</a>
+@* <br />
+<button action="Create" class="btn btn-primary">Crear Nueva Persona</button> *@

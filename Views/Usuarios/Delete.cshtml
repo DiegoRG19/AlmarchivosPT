@@ -1,0 +1,18 @@
+﻿@model AlmarchivosPT.Models.Usuario
+
+<h2>Eliminar Usuario</h2>
+
+<div>
+    <h4>¿Estás seguro de que quieres eliminar este usuario?</h4>
+    <dl>
+        <dt>Usuario</dt>
+        <dd>@Model.Usuario1</dd>
+    </dl>
+
+    <form asp-action="Delete" method="post">
+        <input type="hidden" asp-for="IdUsuario" />
+        <button type="submit" class="btn btn-primary">Eliminar</button>
+        <br />
+        <a asp-action="Index">Cancelar</a>
+    </form>
+</div>

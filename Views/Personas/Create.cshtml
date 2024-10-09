@@ -1,0 +1,38 @@
+﻿@model AlmarchivosPT.Models.Persona
+
+<h2>Crear Persona</h2>
+
+<form asp-action="Create" method="post">
+    <div>
+        <label>Nombres</label>
+    </div>
+    <div>
+        <input asp-for="Nombres" />
+    </div>
+    <div>
+        <label>Apellidos</label>
+    </div>
+    <div>
+        <input asp-for="Apellidos" />
+    </div>
+    <div>
+        <label>Número de identificación</label>
+    </div>
+    <div>
+        <input asp-for="NumIdPersona" />
+    </div>
+    <div>
+        <label>Email</label>
+    </div>
+    <div>
+        <input asp-for="Correo" />
+    </div>
+    <div>
+        <label>Tipo identificación</label>
+    </div>
+    <div>
+        <input asp-for="TipoIdPersona" />
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Crear</button>
+</form>
